@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {HashRouter, BrowserRouter} from 'react-router-dom'
+import reportWebVitals from './reportWebVitals'
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

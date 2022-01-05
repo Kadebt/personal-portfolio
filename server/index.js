@@ -15,7 +15,7 @@ app.use(
     session({
         resave: false,
         saveUninitialized: true,
-        cooke: {maxAge: 1000 * 60 * 60 * 24 * 30},
+        cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},
         secret: SESSION_SECRET
     })
 )
@@ -30,9 +30,9 @@ app.get('*', (req, res) => {
 
 massive({
     connectionString: CONNECTION_STRING,
-    ssl: {
-      rejectUnauthorized: false,
-    },
+    // ssl: {
+    //   rejectUnauthorized: false,
+    // },
   }).then((dbInstance) => {
     app.set('db', dbInstance)
     console.log('db connected')

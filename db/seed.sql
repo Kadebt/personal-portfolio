@@ -3,6 +3,6 @@ create table projects(
     name varchar(20),
     photo varchar(250)
     gif varchar(250)
-    desc varchar(250)
+    description varchar(250)
     link varchar(250)
 );

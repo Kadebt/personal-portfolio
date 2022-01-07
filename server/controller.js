@@ -5,7 +5,8 @@ module.exports = {
         
         const projects = await db.get_projects()
 
-        res.status(200).send(projects)
+        res.status(200).send(projects) 
+        console.log(projects)
     },
     getPresentation: async (req, res) => {
         const db = req.app.get('db')

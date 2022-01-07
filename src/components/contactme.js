@@ -13,7 +13,7 @@ const contactMe = () => {
       }, (error) => {
           console.log(error.text);
       });
-      form.current.reset
+    //   form.current.reset
     }
     return (
         <form ref={form} onSubmit={sendEmail}>

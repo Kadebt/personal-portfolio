@@ -1,0 +1,15 @@
+.projects-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-left:0 auto;
+    margin-right:0  auto;
+    z-index: 0;
+}
+
+.projects-info{
+    margin-left: auto;
+    margin-right: auto;
+}

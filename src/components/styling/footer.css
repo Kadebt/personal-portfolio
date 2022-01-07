@@ -2,3 +2,13 @@ img {
     height: 50px;
     width: 50px
 }
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

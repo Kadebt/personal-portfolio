@@ -1,0 +1,41 @@
+.header-div{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.links-div{
+    margin: auto;
+    display: flex;
+    align-items:center;
+}
+
+.info-div{
+   margin: auto;
+   display: flex;
+   align-items: center; 
+}
+
+.logo{
+    margin: 5px
+}
+
+.header-link{
+    margin: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(136,145,155);
+    
+}
+
+.name{
+    font-size: 25px;
+}
+
+.title{
+    font-size: 12px;
+    margin: 10px;
+}

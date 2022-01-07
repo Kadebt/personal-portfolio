@@ -2,7 +2,7 @@ const express = require('express')
 const massive = require('massive')
 require('dotenv').config()
 const session = require('express-session')
-const controller = require('controller')
+const controller = require('./controller')
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 const path = require('path')
 const { appendFile } = require('fs')
@@ -20,8 +20,8 @@ app.use(
     })
 )
 
-app.get('app/projects', controller.getProjects)
-app.get('app/presentation/:id', controller.getPresentation)
+app.get('/api/projects', controller.getProjects)
+app.get('/api/presentation/:id', controller.getPresentation)
 
 app.use(express.static(__dirname + '/../build'))
 app.get('*', (req, res) => {
@@ -30,9 +30,9 @@ app.get('*', (req, res) => {
 
 massive({
     connectionString: CONNECTION_STRING,
-    // ssl: {
-    //   rejectUnauthorized: false,
-    // },
+    ssl: {
+      rejectUnauthorized: false,
+    },
   }).then((dbInstance) => {
     app.set('db', dbInstance)
     console.log('db connected')

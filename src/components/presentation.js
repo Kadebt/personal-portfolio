@@ -1,23 +1,31 @@
-import React from 'react' 
+import React from 'react'
+import {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 import './styling/presentation.css'
 
 const Presentation = (props) => {
 
-    // const [presentation, setPresentation] = useState([])
+   console.log(props)
 
-    // const getPresentation = () => {
-    //     axios.get('/api/presentation/${id}').then((res) => {
-    //         setPresentation
+    // useEffect(() => {
+    //     axios.get(`/api/presentation/${id}`).then((res) => {
+    //         setPresentation(res.data)})
     //     })
-    // }
-
+    
     return(
         <>
         <div className='presentation-scrim' />
         <div className='presentation-div'>
-                <div className='presentation-inner'>
-                <img src={props.projectId.gif}/>
-                <button onClick={() => props.setPopUp(false)}>Close</button>
+            <h2 className='presentation-title'>{props.title}</h2>
+                 <div className='presentation-inner'>
+                <img className='presentation-gif'src={props.gif}/>
+                <div className='info-wrapper'>
+                <p className='presentation-description'>{props.description}</p>
+                <a className='presentation-link'>{props.link}</a>
+                <a className='presentation-src'>link to source code tba</a>
+                </div>
+                <button className='closebutton' onClick={() => props.setPopUp(false)}>Close</button>
                 </div>
             </div>
         </>

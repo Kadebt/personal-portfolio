@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import {useParams} from 'react-router-dom'
 import Presentation from './presentation'
 import './styling/projects.css'
 
-const Projects = () => {
+const Projects = (props) => {
 
 
         const [projects, setProjects] = useState([])
@@ -15,35 +16,46 @@ const Projects = () => {
             setProjects(res.data)})
         }, [])
 
-        console.log(projects)
+
         const handlePopUpClick = (id) => {
             axios.get(`/api/presentation/${id}`).then((res) => {
-                setPresentation(res.data)
+                setPresentation(res.data)  
             })
         }
 
+    const mappedPresentation = presentation.map((e) =>{
+        return(
+            <Presentation
+            id={e.id} 
+            title={e.name}
+                gif={e.gif}
+                description={e.description}
+                link={e.link}
+                setPopUp={setPopUp}/>
+        )})
+    
+
     const mappedProjects = projects.map((e) => {
         return(
-            <div className='project-info'>
-                <h2 onClick={() => {
-                    setPopUp(true);
-                    handlePopUpClick(e.id)
-                }}>{e.name}</h2>
-                <img src={e.photo}/>
-                <p>{e.description}</p>
+            <div onClick={() => {
+                console.log(e.id)
+                handlePopUpClick(e.id)
+                setPopUp(true);
+                
+            }} className='project-info'>
+                <h2 className='projects-title'>{e.name}</h2>
+                <img className='projects-img' src={e.photo} />
+                <p className='projects-description'>{e.description}</p>
+               
             </div>
         )
     })
+    console.log(presentation)
 
     return (
     <div className='projects-wrapper'>
-        <div className='projects-div'>
             {mappedProjects}
-        </div>
-            {popUp === true ? <Presentation 
-                project={projects} 
-                projectId={presentation} 
-                setPopUp={setPopUp}/> : null}
+            {popUp === true ? mappedPresentation : null}
     </div>
     )
 

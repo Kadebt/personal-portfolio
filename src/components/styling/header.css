@@ -1,10 +1,11 @@
 .header-div{
+    margin-top: 4vh;
+    margin-bottom: 0px;
     width: 70vw;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
-    padding-top: 20px;
 }
 
 .links-div{
@@ -20,7 +21,11 @@
 }
 
 .logo{
-    margin: 5px
+    fill: white;
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    margin: 5px;
 }
 
 .header-link{
@@ -31,11 +36,40 @@
     
 }
 
+.header-link:hover{
+    color: white;
+
+}
+
+.header-link:active{
+    color:white;
+    text-decoration: underline
+}
+
 .name{
-    font-size: 25px;
+    font-size: 20px;
+    margin:0px;
 }
 
 .title{
     font-size: 12px;
-    margin: 10px;
+    margin: 0px;
+    color: rgb(136,145,155)
 }
+.title-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.line-break{
+    width: 70vw;
+    border: none;
+    background-color: rgb(136,145,155);
+    margin: 0px;
+    padding:0px;
+    height: 1px;
+  }
+   .logo-svg{
+       fill: white;
+   }

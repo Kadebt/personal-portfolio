@@ -4,11 +4,24 @@ img {
 }
 
 .footer-div{
+    margin: 4vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
+.footer-links{
+    font-size: 24px;
+    margin: 5px;
+    text-decoration: none;
+    color: white
+}
+
+.vl{
+    border-left: 1px solid rgb(136,145,155);
+    height: 30px;
+    margin: 2px
+}
 
 

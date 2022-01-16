@@ -1,12 +1,17 @@
 import React from 'react'
 import './styling/footer.css'
+import { ImGithub } from 'react-icons/im'
+import {SiTwitter} from 'react-icons/si'
+import {BsLinkedin} from 'react-icons/bs'
 
 const Footer = () => {
     return(
     <div className='footer-div'>
-        <a href="https://www.linkedin.com/in/kadethompson3/"><img src='https://www.freeiconspng.com/thumbs/linkedin-logo-png/linkedin-logo-3.png'/></a>
-        <a href="https://github.com/Kadebt"><img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'/></a>
-        <a href="https://twitter.com/kadebthompson"><img src='http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png'/></a>
+        <a className='footer-links' href="https://www.linkedin.com/in/kadethompson3/"><BsLinkedin/></a>
+        <div className='vl'></div>
+        <a className='footer-links' href="https://github.com/Kadebt"> <ImGithub/></a>
+        <div className='vl'></div>
+        <a className='footer-links' href="https://twitter.com/kadebthompson"> <SiTwitter/> </a>
     </div>
     )
 }

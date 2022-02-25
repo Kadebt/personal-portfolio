@@ -1,11 +1,12 @@
-.aboutme-wrapper{
-    display: flex;
-    align-items:center;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
+.aboutme-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
 }
 
-.aboutme-text{
-   color: rgb(136,145,155)
+.aboutme-text {
+  color: rgb(235, 235, 235);
+  text-align: center;
 }

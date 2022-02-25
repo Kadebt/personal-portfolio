@@ -1,33 +1,52 @@
-import React, {useRef} from 'react'
-import emailjs from 'emailjs-com'
-import './styling/contactme.css'
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import "./styling/contactme.css";
 
 const contactMe = () => {
-    const form = useRef()
+  const form = useRef();
 
-    let sendEmail = (e) => {
-        e.preventDefault();
+  let sendEmail = (e) => {
+    e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_svd3g0p', form.current, 'user_wyBd7jAtG8fKIQt3RhrJz')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_svd3g0p",
+        form.current,
+        "user_wyBd7jAtG8fKIQt3RhrJz"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
-    //   form.current.reset
-    }
-    return (
-        <form className='contactme-form' ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input className='contactme-name' type="text" name="from_name" />
-          <label>Email</label>
-          <input className='contactme-name' type="email" name="email" />
-          <label>Message</label>
-          <textarea className='contactme-message' name="message" />
-          <input type="submit" value="Send" />
-        </form>
+        }
       );
+    //   form.current.reset
+  };
+  return (
+    <form className="contactme-form" ref={form} onSubmit={sendEmail}>
+      <input
+        className="contactme-name"
+        type="text"
+        name="from_name"
+        placeholder="Name"
+      />
+      <input
+        className="contactme-name"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
+      <textarea
+        className="contactme-message"
+        name="message"
+        placeholder="Message"
+      />
+      <input className="form-submit" type="submit" value="Send" />
+    </form>
+  );
+};
 
-}
-
-export default contactMe
+export default contactMe;

@@ -2,6 +2,7 @@ import React from "react";
 import "./styling/aboutme.css";
 
 const aboutMe = () => {
+  // aboutme
   return (
     <div className="aboutme-wrapper">
       <h1>About Me</h1>

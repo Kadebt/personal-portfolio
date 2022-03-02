@@ -46,8 +46,8 @@ const Projects = (props) => {
       >
         <h2 className="projects-title">{e.name}</h2>
         <img className="projects-img" src={e.photo} />
-        <a className="projects-description" href={e.link}>
-          Source Code
+        <a className="projects-description" href={!!e.live ? e.live : e.link}>
+          {!!e.live ? "Live Version" : "Source Code"}
         </a>
       </div>
     );

@@ -21,8 +21,12 @@ const Presentation = (props) => {
           <img className="presentation-gif" src={props.gif} />
           <div className="info-wrapper">
             <p className="presentation-description">{props.description}</p>
-            <a className="presentation-link">{props.link}</a>
-            <a className="presentation-src">{props.live}</a>
+            <a className="presentation-link" href={props.link}>
+              Source Code
+            </a>
+            <a className="presentation-src" href={props.live}>
+              Live Version
+            </a>
           </div>
           <button className="closebutton" onClick={() => props.setPopUp(false)}>
             X

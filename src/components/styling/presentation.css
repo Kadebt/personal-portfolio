@@ -78,4 +78,8 @@
     height: 80%;
     width: 90%;
   }
+
+  .presentation-description {
+    font-size: 12px;
+  }
 }

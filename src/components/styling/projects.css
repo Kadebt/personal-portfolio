@@ -1,38 +1,32 @@
-.projects-wrapper{
+@media only screen and (max-width: 800px) {
+  .projects-wrapper {
+    flex-direction: column;
+  }
+
+  .project-info {
+    height: 50vh;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .projects-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 80vw;
-    margin-left:0 auto;
-    margin-right:0  auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
     z-index: 0;
-    height: 45vh;
-}
+  }
 
-.projects-div{
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-evenly;
-    align-content: space-around;
-    height: 100%;
-    width: 25%;
-    margin: 10px;
-    background-color: rgb(41, 41, 41);
-    border: 3px solid rgb(136,145,155);
-    border-radius: 5px;
-}
-
-.project-info:hover{
-    background-color: rgba(73, 73, 73, 0.2);
-    border: 3px solid white
-
-}
-
-.project-info{
+  .project-info {
     width: 25%;
     background-color: rgb(41, 41, 41);
-    border: 3px solid rgb(136,145,155);
+    border: 3px solid rgb(136, 145, 155);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -41,30 +35,48 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
 }
 
-.projects-title{
-    color: white;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right:auto;
+.projects-div {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  align-content: space-around;
+  height: 100%;
+  width: 25%;
+  margin: 10px;
+  background-color: rgb(41, 41, 41);
+  border: 3px solid rgb(136, 145, 155);
+  border-radius: 5px;
 }
 
-.projects-img{
-    margin-left: auto;
-    margin-right:auto;
-    width: 90%;
-    height: 50%;
+.project-info:hover {
+  background-color: rgba(73, 73, 73, 0.2);
+  border: 3px solid white;
 }
 
-.projects-description{
-    color: white;
-    margin-left: auto;
-    margin-right:auto;
+.projects-title {
+  color: white;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.border-div{
-    border: 3px solid rgb(78, 78, 78);
-    border-radius: 5px;
+.projects-img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 50%;
 }
 
+.projects-description {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.border-div {
+  border: 3px solid rgb(78, 78, 78);
+  border-radius: 5px;
+}

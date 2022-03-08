@@ -70,3 +70,12 @@
 .presentation-src {
   color: white;
 }
+
+@media only screen and (max-width: 800px) {
+  .presentation-div {
+    position: fixed;
+    top: 5%;
+    height: 80%;
+    width: 90%;
+  }
+}

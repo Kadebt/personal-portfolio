@@ -1,10 +1,10 @@
-.body{
+.body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(24,24,24);
+  background-color: rgb(24, 24, 24);
   color: white;
-  height: 100vh;
+  height: auto;
   margin-top: 0px;
 }

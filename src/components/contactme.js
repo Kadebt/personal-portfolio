@@ -10,7 +10,7 @@ const contactMe = () => {
 
     emailjs
       .sendForm(
-        "gmail",
+        "service_95fboxm",
         "template_svd3g0p",
         form.current,
         "user_wyBd7jAtG8fKIQt3RhrJz"
@@ -18,12 +18,13 @@ const contactMe = () => {
       .then(
         (result) => {
           console.log(result.text);
+          console.log(form.current);
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
-    //   form.current.reset
   };
   return (
     <form className="contactme-form" ref={form} onSubmit={sendEmail}>
